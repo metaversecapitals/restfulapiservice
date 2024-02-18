@@ -1,3 +1,11 @@
+const express = require('express');
+const app = express();
+
+let resources = [
+    {id: 1, name: 'resource1'},
+    {id: 2, name: 'resource2'}
+];
+
 app.get('/resources/:id/detail', function(req, res) {
     let resourceIndex = resources.findIndex(resource => resource.id === parseInt(req.params.id));
     if (resourceIndex !== -1) {
