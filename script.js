@@ -1,4 +1,3 @@
-const express = require('express');
 const app = express();
 
 let resources = [
@@ -34,4 +33,3 @@ app.get('/resources/:id', function(req, res) {
             data: {}
         });
     }
-});
